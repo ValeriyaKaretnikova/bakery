@@ -1,0 +1,16 @@
+@use 'colors' as c;
+
+footer {
+    background-color: c.$black;
+    padding: 1rem;
+    p{
+        color: white;
+        font-size: 0.7rem;
+        margin: 0;
+    }
+   svg{
+       width: 20px;
+       height: 20px;
+       fill: white;
+   }
+}

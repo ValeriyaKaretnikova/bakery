@@ -1,0 +1,209 @@
+@use 'colors' as c;
+
+.banner {
+  padding: 4rem 1rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/banner-bread.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+}
+
+.utility-btn {
+  background-color: c.$yellow;
+  color: c.$black;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  font-family: "Amatic SC", cursive;
+  font-size: 2rem;
+  margin: 2rem auto;
+  display: inline-block;
+}
+
+.about-us {
+  padding: 2rem 0rem;
+
+  .btn {
+    text-align: center;
+  }
+
+  .flex {
+    margin: 1rem;
+    align-items: center;
+    flex-direction: column;
+  }
+  h3 {
+    text-align: center;
+    padding: 1rem;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+.why-us {
+  padding: 0rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  svg {
+    width: 75px;
+    height: 75px;
+    fill: c.$yellow;
+  }
+  .reason {
+    padding-top: 3rem;
+    position: relative;
+
+    .bg-decor {
+      position: absolute;
+      max-width: 200px;
+    }
+  }
+  .reason:first-of-type {
+    .bg-decor {
+      left: -7rem;
+      top: -1rem;
+    }
+  }
+  .reason:nth-of-type(3) {
+    .bg-decor {
+      width: 150px;
+      right: -4rem;
+      top: -2rem;
+    }
+  }
+  .reason:nth-of-type(5) {
+    .bg-decor {
+      left: -6rem;
+      top: -1rem;
+    }
+  }
+}
+
+.delivery {
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+
+  h3 {
+    text-align: center;
+  }
+
+  .bg-decor {
+    position: absolute;
+    width: 200px;
+    right: -5rem;
+    top: 6.5rem;
+  }
+
+  .number {
+    font-family: "Amatic SC", cursive;
+    font-weight: bold;
+    font-size: 4rem;
+  }
+  p {
+    margin: 0;
+    z-index: 1;
+  }
+  .circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: c.$pale-yellow;
+    position: absolute;
+    top: 40px;
+    left: -10px;
+  }
+  .step {
+    display: flex;
+    position: relative;
+  }
+  .text {
+    margin: 2rem 0 2rem 1rem;
+    z-index: 1;
+  }
+}
+
+.best-pastry {
+  padding: 0 2rem;
+  h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: c.$black;
+  }
+  .item {
+    margin: 0 auto 3rem;
+    max-width: 200px;
+    img {
+      margin: 0 auto;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    .price span {
+      font-weight: bold;
+      color: c.$yellow;
+      fill: c.$yellow;
+    }
+    .price svg {
+      fill: c.$yellow;
+    }
+  }
+}
+
+.order {
+  padding: 2rem 1rem;
+  label {
+    display: block;
+  }
+  input {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid c.$offblack;
+    padding: 0.5rem;
+    height: 35px;
+  }
+  input[type="submit"] {
+    border: none;
+    padding: 0;
+    height: 45px;
+  }
+}
+
+.contacts {
+  position: relative;
+  overflow: hidden;
+  h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  padding: 0 1rem 3rem;
+  svg {
+    width: 25px;
+    height: 25px;
+    fill: c.$yellow;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    p {
+      margin: 0 1rem 0;
+    }
+  }
+
+  .bg-decor {
+    position: absolute;
+    bottom: -0.5rem;
+    right: 0;
+  }
+}
