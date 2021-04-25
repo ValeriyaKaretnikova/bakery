@@ -1,4 +1,5 @@
 @use 'colors' as c;
+@use 'mixins' as *;
 
 .banner {
   padding: 4rem 1rem;
@@ -10,6 +11,11 @@
   background-attachment: fixed;
   color: white;
   text-align: center;
+
+  @include break(small) {
+    padding: 4rem;
+    text-align: left;
+  }
 }
 
 .utility-btn {
@@ -42,6 +48,27 @@
   p {
     text-align: center;
   }
+
+  @include break(small) {
+    .flex:first-of-type {
+      flex-direction: row;
+      img {
+        margin-right: 1rem;
+      }
+    }
+    .flex:nth-of-type(2) {
+      flex-direction: row-reverse;
+      img {
+        margin-left: 1rem;
+      }
+    }
+    img {
+      width: 50%;
+    }
+    p {
+      text-align: left;
+    }
+  }
 }
 
 .why-us {
@@ -58,29 +85,52 @@
   .reason {
     padding-top: 3rem;
     position: relative;
+    @include break(small) {
+      width: 48%;
+    }
+    @include break(med) {
+      width: 30%;
+    }
+  }
 
-    .bg-decor {
-      position: absolute;
-      max-width: 200px;
-    }
+  .bg-decor {
+    position: absolute;
+    max-width: 200px;
   }
-  .reason:first-of-type {
-    .bg-decor {
+  .bg-decor:first-of-type {
+    left: -5rem;
+    top: 0;
+    @include break(med) {
       left: -7rem;
-      top: -1rem;
     }
   }
-  .reason:nth-of-type(3) {
-    .bg-decor {
-      width: 150px;
+  .bg-decor:nth-of-type(2) {
+    width: 150px;
+    right: -3rem;
+    @include break(small) {
       right: -4rem;
-      top: -2rem;
+      top: 30%;
+    }
+    @include break(med) {
+      top: 50%;
     }
   }
-  .reason:nth-of-type(5) {
-    .bg-decor {
-      left: -6rem;
-      top: -1rem;
+  .bg-decor:nth-of-type(3) {
+    left: -5rem;
+    @include break(small) {
+      left: -5rem;
+      top: 60%;
+    }
+    @include break(med) {
+      top: 50%;
+      left: -5.5rem;
+    }
+  }
+  @include break(small) {
+    .reasons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 }
@@ -89,18 +139,19 @@
   padding: 3rem 2rem;
   position: relative;
   overflow: hidden;
-
   h3 {
     text-align: center;
+    margin-bottom: 2rem;
   }
-
   .bg-decor {
     position: absolute;
     width: 200px;
     right: -5rem;
-    top: 6.5rem;
+    top: 11.5rem;
+    @include break(med) {
+      top: 0rem;
+    }
   }
-
   .number {
     font-family: "Amatic SC", cursive;
     font-weight: bold;
@@ -127,6 +178,16 @@
     margin: 2rem 0 2rem 1rem;
     z-index: 1;
   }
+  .steps {
+    @include break(small) {
+      margin: 0 10%;
+    }
+    @include break(med) {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+    }
+  }
 }
 
 .best-pastry {
@@ -142,26 +203,59 @@
   }
   .item {
     margin: 0 auto 3rem;
-    max-width: 200px;
-    img {
-      margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 200px;
+    @include break(small) {
+      margin: 0 2%;
     }
-    p {
-      margin-bottom: 0;
+  }
+
+  img {
+    margin: 0 auto;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .price span {
+    font-weight: bold;
+    color: c.$yellow;
+    fill: c.$yellow;
+  }
+  .price svg {
+    fill: c.$yellow;
+  }
+
+  .items {
+    @include break(small) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
-    .price span {
-      font-weight: bold;
-      color: c.$yellow;
-      fill: c.$yellow;
+    @include break(med) {
+      justify-content: space-evenly;
     }
-    .price svg {
-      fill: c.$yellow;
-    }
+  }
+}
+.back-decor {
+  position: absolute;
+  left: -10rem;
+  @include break(med){
+    left:0;
   }
 }
 
 .order {
   padding: 2rem 1rem;
+  position: relative;
+
+  @include break(med) {
+    width: 50%;
+    margin: 2rem auto;
+  }
+
   label {
     display: block;
   }
@@ -176,6 +270,12 @@
     border: none;
     padding: 0;
     height: 45px;
+    background-color: c.$yellow;
+    @include break(small) {
+      display: block;
+      text-align: center;
+      max-width: 300px;
+    }
   }
 }
 
@@ -200,7 +300,6 @@
       margin: 0 1rem 0;
     }
   }
-
   .bg-decor {
     position: absolute;
     bottom: -0.5rem;

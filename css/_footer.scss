@@ -3,6 +3,7 @@
 footer {
     background-color: c.$black;
     padding: 1rem;
+    
     p{
         color: white;
         font-size: 0.7rem;
@@ -12,5 +13,8 @@ footer {
        width: 20px;
        height: 20px;
        fill: white;
+   }
+   .logo {
+       width:85px;
    }
 }
