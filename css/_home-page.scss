@@ -8,13 +8,15 @@
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover;
-  background-attachment: fixed;
   color: white;
   text-align: center;
 
   @include break(small) {
     padding: 4rem;
     text-align: left;
+  }
+  @include break(wide) {
+    background-attachment: fixed;   
   }
 }
 

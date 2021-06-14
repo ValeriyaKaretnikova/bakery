@@ -237,7 +237,6 @@ header .logo {
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover;
-  background-attachment: fixed;
   color: white;
   text-align: center;
 }
@@ -245,6 +244,11 @@ header .logo {
   .banner {
     padding: 4rem;
     text-align: left;
+  }
+}
+@media (min-width: 960px) {
+  .banner {
+    background-attachment: fixed;
   }
 }
 
