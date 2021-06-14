@@ -279,6 +279,11 @@
       max-width: 300px;
     }
   }
+  form button {
+    display: block;
+    outline: none;
+    border: 1px solid c.$yellow;
+  }
 }
 
 .contacts {

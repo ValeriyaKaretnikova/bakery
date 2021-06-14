@@ -569,6 +569,11 @@ header .logo {
     max-width: 300px;
   }
 }
+.order form button {
+  display: block;
+  outline: none;
+  border: 1px solid #f0b43f;
+}
 
 .contacts {
   position: relative;
